@@ -1,0 +1,19 @@
+{
+  "name": "static-file",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongodb": "^4.12.1",
+    "mustache": "^4.2.0",
+    "properties-reader": "^2.3.0"
+  },
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Fabian Galasel",
+  "license": "ISC",
+  "description": ""
+}
