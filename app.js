@@ -30,8 +30,8 @@ app.use(express.json());
 
 app.use(cors());
 
-var staticPath = path.join(__dirname, "Static");
-app.use(express.static(staticPath));
+var imagePath = path.resolve(__dirname, "Static/Images");
+app.use("/image", express.static(imagePath));
 
 
 // Middleware 1: Logs all incoming requests
@@ -40,17 +40,7 @@ app.use(function (req, res, next) {
    next();
 });
 
-// Middleware 2: Serves images if the file exists in the "Images" folder
-app.use("/images", function (req, res, next) {
-   var imagePath = path.join(staticPath, "Images", req.url);
-   fs.access(imagePath, fs.constants.F_OK, (err) => {
-      if (err) {
-         next(); // File does not exist, move to the next middleware
-      } else {
-         res.sendFile(imagePath); // Serve the file if it exists
-      }
-   });
-});
+
 
 
 app.param('collectionName'
