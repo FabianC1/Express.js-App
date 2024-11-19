@@ -33,6 +33,7 @@ app.use(cors());
 // Serve static files from the Vue.js-App-FrontEnd directory
 app.use(express.static(path.join(__dirname, '..', 'Vue.js-App-FrontEnd')));
 
+
 // Serve index.html when accessing the root
 app.get('/', function (req, res) {
    res.sendFile(path.join(__dirname, '..', 'Vue.js-App-FrontEnd', 'index.html'));
