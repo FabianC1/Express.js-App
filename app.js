@@ -40,7 +40,7 @@ app.get('/', function (req, res) {
 });
 
 var imagePath = path.resolve(__dirname, "Static/Images");
-app.use("/image", express.static(imagePath));
+app.use("/image",express.static(imagePath));
 
 
 // Middleware 1: Logs all incoming requests
