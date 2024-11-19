@@ -30,6 +30,14 @@ app.use(express.json());
 
 app.use(cors());
 
+// Serve static files from the Vue.js-App-FrontEnd directory
+app.use(express.static(path.join(__dirname, '..', 'Vue.js-App-FrontEnd')));
+
+// Serve index.html when accessing the root
+app.get('/', function (req, res) {
+   res.sendFile(path.join(__dirname, '..', 'Vue.js-App-FrontEnd', 'index.html'));
+});
+
 var imagePath = path.resolve(__dirname, "Static/Images");
 app.use("/image", express.static(imagePath));
 
@@ -39,8 +47,6 @@ app.use(function (req, res, next) {
    console.log("Request URL:", req.url);
    next();
 });
-
-
 
 
 app.param('collectionName'
