@@ -1,4 +1,4 @@
-# Express.js-App# LessonBookingSystem - Backend (Express.js-App)
+# LessonBookingSystem - Backend (Express.js-App)
 
 ## Overview
 Backend API for the LessonBookingSystem full-stack app, built with Express.js and Node.js. Manages user authentication, lesson scheduling, and booking operations.
