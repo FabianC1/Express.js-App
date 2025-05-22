@@ -23,21 +23,21 @@ Backend API for the LessonBookingSystem full-stack app, built with Express.js an
    git clone https://github.com/your-username/LessonBookingSystem-Express-Backend.git
    cd LessonBookingSystem-Express-Backend
    ```
-2.Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
-3. Create a .env file with your environment variables:
+4. Create a .env file with your environment variables:
    ```bash
    PORT=5000
    MONGODB_URI=mongodb://localhost:27017/lesson-booking
    JWT_SECRET=your_jwt_secret_key
    ```
-4. Start the server:
-      ```bash
+5. Start the server:
+   ```bash
    npm start
    ```
-5. API runs on http://localhost:5000
+6. API runs on http://localhost:5000
 
 ## Notes
 - Implements REST API endpoints for user registration, login, lessons, and bookings.  
